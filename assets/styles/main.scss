@@ -32,8 +32,8 @@ body {
   line-height: 4rem;
   text-align: center;
   display: flex;
-  justify-content: space-around;
-  padding: 0 2rem;
+  justify-content: space-between;
+  padding: 0 4rem;
   color: $white-color;
   background: linear-gradient(
     180deg,
@@ -54,6 +54,9 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto;
     column-gap: 8rem;
+    .hamburger {
+      display: none;
+    }
 
     a {
       text-decoration: none;
@@ -88,7 +91,7 @@ body {
   height: 100vh;
   background: $primary-color;
   &:nth-child(2) {
-    height: calc(225vh + 2rem);
+    height: fit-content;
     background: $lightbrown-color;
   }
   &:nth-child(3) {
@@ -182,7 +185,7 @@ body {
     width: 30vw;
     height: 8vw;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3rem;
     background: linear-gradient(
       270deg,
       #b68a68 45.99%,
@@ -199,7 +202,7 @@ body {
   .findUs-card {
     margin-left: 5vw;
     width: 90vw;
-    height: 75vh;
+    height: 55vw;
     transform: translate(0%, 0%);
     position: relative;
     .findUs-box {
@@ -319,7 +322,7 @@ body {
     width: 30vw;
     height: 8vw;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3rem;
     background: linear-gradient(
       90deg,
       #b68a68 45.99%,
@@ -338,22 +341,64 @@ body {
     flex-grow: 1;
     flex-shrink: 1;
     .menu-header {
+      font-weight: bold;
+      font-size: 2rem;
     }
     .menus-detail {
       display: flex;
       gap: 0.75rem;
       .menus-card {
         position: relative;
+        width: calc((((100vw - 2rem) / 8) - 1.25rem));
+        height: calc((((100vw - 2rem) / 8) - 1.25rem));
+        &::before {
+          z-index: 1;
+          position: absolute;
+          content: '';
+          width: calc((((100vw - 2rem) / 8) - 1.25rem) * 0.8);
+          height: calc((((100vw - 2rem) / 8) - 1.25rem) * 0.8);
+          margin: calc((((100vw - 2rem) / 8) - 1.25rem) * 0.1);
+          border-radius: 1rem;
+          background: $brown-color;
+          transform: scaleX(0) rotate(66.81deg);
+          transition: 0.4s;
+          top: 0;
+          left: 0;
+        }
         .menu-img {
+          position: absolute;
+          z-index: 2;
           object-fit: cover;
           width: calc(((100vw - 2rem) / 8) - 1.25rem);
           height: calc(((100vw - 2rem) / 8) - 1.25rem);
         }
         .menu-name {
+          z-index: 3;
           position: absolute;
           background: $darkbrown-color;
-          bottom: 1rem;
+          padding: calc((((100vw - 2rem) / 8) - 1.25rem) * 0.05);
+          font-weight: bold;
+          color: $white-color;
+          bottom: 20%;
           right: 0;
+          // font-size: 0;
+          transform: scaleX(0);
+          transition: 0.4s;
+          transform-origin: right;
+        }
+        &:hover {
+          &::before {
+            transition: 0.4s;
+            transform: scaleX(1) rotate(66.81deg);
+          }
+          .menu-name {
+            // font-size: 1rem;
+            transform: scaleX(1);
+            transition: 0.4s;
+            &::after {
+              transform: scaleX(1);
+            }
+          }
         }
       }
     }
@@ -390,5 +435,242 @@ body {
     width: 60vw;
     height: 50vw;
     padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+    .icon {
+      width: 60px;
+      height: 60px;
+      img {
+        height: 60px;
+        width: 60px;
+      }
+    }
+    .menu {
+      display: block;
+      transition: 0.3s;
+      .hamburger {
+        display: block;
+        text-align: right;
+        padding-right: 1rem;
+      }
+
+      a {
+        display: none;
+        line-height: 60px;
+        text-align: right;
+        padding-right: 1rem;
+        transition: 0.3s;
+        &::after {
+          transform-origin: right;
+          z-index: 10;
+          left: auto;
+          right: 1rem;
+          bottom: 0px;
+        }
+      }
+      .line::after {
+        transform: scaleX(1);
+      }
+      &.show {
+        a {
+          transition: 0.3s;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .home {
+    .slider {
+      .dot-bar {
+        gap: 1rem;
+        height: 0.5rem;
+        .dot {
+          width: 0.5rem;
+          height: 0.5rem;
+        }
+        .dot.active {
+          width: 1.5rem;
+          height: 0.5rem;
+        }
+      }
+    }
+  }
+  .findUs {
+    padding: 1rem 0;
+    .findUs-header {
+      position: absolute;
+      width: 50vw;
+      height: 10vw;
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+    .findUs-card {
+      margin-top: 10vw;
+      width: 90vw;
+      height: 130vw;
+      transform: translate(0%, 0%);
+      position: relative;
+      .findUs-box {
+        position: absolute;
+        top: 47.5vw;
+        left: 5vw;
+        transform: translate(0%, -50%);
+        width: 80vw;
+        height: 80vw;
+        .findUs-rect {
+          width: 70vw;
+          height: 70vw;
+          &:nth-child(2) {
+            width: 70vw;
+            height: 70vw;
+          }
+        }
+        .findUs-img {
+          width: 80vw;
+          height: 60vw;
+          img {
+            width: calc(80vw * 0.9);
+            height: calc(60vw * 0.9);
+          }
+        }
+      }
+      .findUs-gallery {
+        display: flex;
+        top: 15vw;
+        width: 90vw;
+        height: 15vw;
+        gap: 3.3vw;
+        div {
+          margin-bottom: 0;
+        }
+        img {
+          width: 20vw;
+          height: 15vw;
+        }
+      }
+      .findUs-detail {
+        top: 80vw;
+        left: 15vw;
+        width: 60vw;
+        height: 30vw;
+        box-shadow: 0px -40px 24px -20px rgba(0, 0, 0, 0.4);
+        padding: 1rem;
+        .findUs-location {
+          font-size: 1.75rem;
+        }
+        .findUs-det {
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+          &:nth-child(2n + 1) {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+    .right {
+      .findUs-detail {
+        left: auto;
+        right: 15vw;
+        box-shadow: 0px -40px 24px -20px rgba(0, 0, 0, 0.4);
+        text-align: left;
+      }
+    }
+  }
+  .menus {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    .menus-header {
+      width: 50vw;
+      height: 10vw;
+      font-size: 1.5rem;
+      padding: 0 1rem;
+      margin-left: -1rem;
+      display: flex;
+    }
+    .menus-list {
+      height: fit-content;
+      .menu-header {
+        font-size: 2rem;
+      }
+      .menus-detail {
+        flex-wrap: wrap;
+        .menus-card {
+          width: calc((((100vw) / 3) - 1.25rem));
+          height: calc((((100vw) / 3) - 1.25rem));
+          &::before {
+            width: calc((((100vw) / 3) - 1.25rem) * 0.8);
+            height: calc((((100vw) / 3) - 1.25rem) * 0.8);
+            margin: calc((((100vw) / 3) - 1.25rem) * 0.1);
+          }
+          .menu-img {
+            width: calc(((100vw) / 3) - 1.25rem);
+            height: calc(((100vw) / 3) - 1.25rem);
+          }
+          .menu-name {
+            padding: calc((((100vw) / 3) - 1.25rem) * 0.05);
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    display: block;
+    .contact-info {
+      width: 100vw;
+      padding: 1rem 1rem 0rem 1rem;
+      .contact-detail {
+        font-size: 1rem;
+      }
+      .contact-flex {
+        display: block;
+        gap: 0rem;
+      }
+    }
+    .contact-map {
+      width: 100vw;
+      height: 140vw;
+      padding: 1rem;
+    }
+  }
+}
+
+.marker {
+  transform: translateY(-100%);
+  background: $error-color;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $white-color;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  border-radius: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    95% 85%,
+    55% 85%,
+    50% 100%,
+    45% 85%,
+    5% 85%,
+    0 75%
+  );
+  &::after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    color: $white-color;
+    position: absolute;
+    bottom: -1rem;
+    left: calc(50% - 0.5rem);
+    z-index: 9999;
   }
 }

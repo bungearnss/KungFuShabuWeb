@@ -1,7 +1,7 @@
 import GoogleMapReact from 'google-map-react'
 import React from 'react'
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>
+const AnyReactComponent = ({ text }) => <div className='marker'>{text}</div>
 
 export default function SectionContact() {
   const defaultProps = {
@@ -9,10 +9,6 @@ export default function SectionContact() {
     zoom: 7,
     khonkaen: { lat: 16.40539518014576, lng: 102.81647402944779 },
     chiangmai: { lat: 18.809886384421567, lng: 98.97668214856283 },
-  }
-
-  const handleApiLoaded = (map, maps) => {
-    // use map and maps objects
   }
 
   return (
@@ -64,16 +60,10 @@ export default function SectionContact() {
           <AnyReactComponent
             lat={13.915954745624894}
             lng={100.4017343991802}
-            text={'A'} /* Kreyser Avrora */
+            text={'Nonthaburi'}
           />
-          <AnyReactComponent
-            {...defaultProps.khonkaen}
-            text={'B'} /* road circle */
-          />
-          <AnyReactComponent
-            {...defaultProps.chiangmai}
-            text={'B'} /* road circle */
-          />
+          <AnyReactComponent {...defaultProps.khonkaen} text={'KhonKaen'} />
+          <AnyReactComponent {...defaultProps.chiangmai} text={'Chiangmai'} />
         </GoogleMapReact>
       </div>
     </>

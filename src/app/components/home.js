@@ -9,10 +9,10 @@ var position = 0
 
 export default function SectionHome() {
   const items = [
-    { id: 0, img: testImg },
-    { id: 1, img: testImg2 },
-    { id: 2, img: testImg },
-    { id: 3, img: testImg2 },
+    { id: 0, imgDesktop: testImg, imgMobile: testImg },
+    { id: 1, imgDesktop: testImg2, imgMobile: testImg },
+    { id: 2, imgDesktop: testImg, imgMobile: testImg },
+    { id: 3, imgDesktop: testImg2, imgMobile: testImg },
   ]
 
   // useEffect(() => {
@@ -55,7 +55,10 @@ export default function SectionHome() {
     <div className='slider'>
       {items.map((item) => (
         <div id={item.id} key={item.id} className='image'>
-          <Image src={item.img} alt='' />
+          <Image
+            src={window.innerWidth > 768 ? item.imgDesktop : item.imgMobile}
+            alt=''
+          />
         </div>
       ))}
 

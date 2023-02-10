@@ -6,9 +6,11 @@ import '../../../../assets/styles/main.scss'
 export default function FindUsCard({ item }) {
   const [srcImg, setSrcImg] = useState(item.imgGal[0])
 
-  function handleSelect(item) {
-    $('.findUs-img img').attr('src', '').fadeOut()
-    $('.findUs-img img').fadeIn(800).attr('src', item)
+  function handleSelect(item, id) {
+    if (item.id == id) {
+      $('.findUs-img img').attr('src', '').fadeOut()
+      $('.findUs-img img').fadeIn(800).attr('src', item)
+    }
     setSrcImg(item)
   }
   return (
@@ -26,9 +28,13 @@ export default function FindUsCard({ item }) {
           </div>
         </div>
         <div className='findUs-gallery'>
-          {item.imgGal.map((item, index) => (
-            <div id={index} key={index} onClick={() => handleSelect(item)}>
-              <Image src={item} id={index} alt='' />
+          {item.imgGal.map((i, index) => (
+            <div
+              id={index}
+              key={index}
+              onClick={() => handleSelect(i, item.id)}
+            >
+              <Image src={i} id={index} alt='' />
             </div>
           ))}
         </div>
