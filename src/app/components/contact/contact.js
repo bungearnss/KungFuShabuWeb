@@ -55,7 +55,6 @@ export default function SectionContact() {
           center={defaultProps.center}
           zoom={defaultProps.zoom}
           yesIWantToUseGoogleMapApiInternals
-          onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
         >
           <AnyReactComponent
             lat={13.915954745624894}
