@@ -24,7 +24,13 @@ export default function FindUsCard({ item }) {
           <div className='findUs-rect' />
           <div className='findUs-rect' />
           <div className='findUs-img'>
-            <Image src={srcImg} alt='' />
+            <Image
+              src={srcImg}
+              alt=''
+              sizes='90vw'
+              priority
+              placeholder='blur'
+            />
           </div>
         </div>
         <div className='findUs-gallery'>
@@ -34,7 +40,7 @@ export default function FindUsCard({ item }) {
               key={index}
               onClick={() => handleSelect(i, item.id)}
             >
-              <Image src={i} id={index} alt='' />
+              <Image src={i} id={index} alt='' priority placeholder='blur' />
             </div>
           ))}
         </div>

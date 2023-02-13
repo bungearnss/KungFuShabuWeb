@@ -1,5 +1,45 @@
 import '../../../../assets/styles/main.scss'
 import testImg from '../../../../assets/images/menutest.webp'
+import ลิ้นวัว from '../../../../assets/images/ลิ้นวัว.webp'
+import แซลม่อนดอง from '../../../../assets/images/แซลม่อนดอง.webp'
+import เสือร้องไห้ from '../../../../assets/images/เสื้อร้องไห้.webp'
+import ปูไข่ดอง from '../../../../assets/images/ปูไข่ดอง.webp'
+import หมูสไลด์เกียวโต from '../../../../assets/images/หมูสไลด์เกียวโต.webp'
+import หมูฟูจิ from '../../../../assets/images/หมูฟูจิ.webp'
+import หมูบดโอไดมะ from '../../../../assets/images/หมูบดโอไดมะ.webp'
+import หมูหม่าล่า from '../../../../assets/images/หมูหม่าล่า.webp'
+import หมูกะเพรา from '../../../../assets/images/หมูกะเพรา.webp'
+import สันคอหมูสไลด์ from '../../../../assets/images/สันคอหมูสไลด์.webp'
+import เนื้อวัวหมักซอส from '../../../../assets/images/เนื้อวัวหมักซอส.webp'
+import เบคอนสไลด์ from '../../../../assets/images/เบคอนสไลด์.webp'
+import เนื้อวัวสไลด์ from '../../../../assets/images/เนื้อวัวสไลด์.webp'
+import หมุสามชั้น from '../../../../assets/images/หมุสามชั้น.webp'
+import ตับหมูสไลด์ from '../../../../assets/images/ตับหมูสไลด์.webp'
+import เนื้อไก่โอไดมะ from '../../../../assets/images/เนื้อไก่โอไดมะ.webp'
+import กุ้ง from '../../../../assets/images/กุ้ง.webp'
+import หอยเชลล์ from '../../../../assets/images/หอยเชลล์.webp'
+import หมึกสด from '../../../../assets/images/หมึกสด.webp'
+import ปูม้า from '../../../../assets/images/ปูม้า.webp'
+import หอยแมลงภู่ from '../../../../assets/images/หอยแมลงภู่.webp'
+import ปลาดอลลี่ from '../../../../assets/images/ปลาดอลลี่.webp'
+import แองกรี้เบิร์ด from '../../../../assets/images/แองกรี้เบิร์ด.webp'
+import ชิคุวะปูอัด from '../../../../assets/images/ชิคุวะปูอัด.webp'
+import ลูกชิ้นกุ้งมังกร from '../../../../assets/images/ลูกชิ้นกุ้งมังกร.webp'
+import มอนซัง from '../../../../assets/images/มอนชัง.webp'
+import เต้าหูขาว from '../../../../assets/images/เต้าหูขาว.webp'
+import เต้าหู้ from '../../../../assets/images/เต้าหู้.webp'
+import ผักกาดขาว from '../../../../assets/images/ผักกาดขาว.webp'
+import ฮ่องเต้น้อย from '../../../../assets/images/ฮ่องเต้น้อย.webp'
+import ผักบุ้ง from '../../../../assets/images/ผักบุ้ง.webp'
+import ขึ้นช่าย from '../../../../assets/images/ขึ้นช่าย.webp'
+import ข้าวโพดอ่อน from '../../../../assets/images/ข้าวโพดอ่อน.webp'
+import สาหร่ายวากาเมะ from '../../../../assets/images/สาหร่ายวากาเมะ.webp'
+import ยำสาหร่าย from '../../../../assets/images/ยำสาหร่าย.webp'
+import มาม่า from '../../../../assets/images/มาม่า.webp'
+import วุ้นเส้น from '../../../../assets/images/วุ้นเส้น.webp'
+import บะหมี่หยก from '../../../../assets/images/บะหมี่หยก.webp'
+import ชีส from '../../../../assets/images/ชีส.webp'
+import ไข่ไก่ from '../../../../assets/images/ไข่ไก่.webp'
 import MenusCard from './menusCard'
 
 export default function SectionMenus() {
@@ -7,81 +47,79 @@ export default function SectionMenus() {
     {
       header: 'Header',
       menus: [
-        { id: 1, img: testImg, name: 'testtestname' },
-        { id: 2, img: testImg, name: 'testtestname' },
-        { id: 3, img: testImg, name: 'testtestname' },
-        { id: 4, img: testImg, name: 'testtestname' },
-        { id: 5, img: testImg, name: 'testtestname' },
-        { id: 6, img: testImg, name: 'testtestname' },
-        { id: 7, img: testImg, name: 'testtestname' },
-        { id: 8, img: testImg, name: 'testtestname' },
+        { id: 1, img: ลิ้นวัว, name: 'ลิ้นวัว' },
+        { id: 2, img: แซลม่อนดอง, name: 'แซลม่อนดอง' },
+        { id: 3, img: เสือร้องไห้, name: 'เสือร้องไห้' },
+        { id: 4, img: ปูไข่ดอง, name: 'ปูไข่ดอง' },
+        { id: 5, img: testImg, name: 'testImg' },
       ],
     },
     {
       header: 'Header',
       menus: [
-        { id: 1, img: testImg, name: 'testtestname' },
-        { id: 2, img: testImg, name: 'testtestname' },
-        { id: 3, img: testImg, name: 'testtestname' },
+        { id: 1, img: หมูสไลด์เกียวโต, name: 'หมูสไลด์เกียวโต' },
+        { id: 2, img: หมูฟูจิ, name: 'หมูฟูจิ' },
+        { id: 3, img: หมูบดโอไดมะ, name: 'หมูบดโอไดมะ' },
+        { id: 4, img: หมูหม่าล่า, name: 'หมูหม่าล่า' },
+        { id: 5, img: หมูกะเพรา, name: 'หมูกะเพรา' },
+        { id: 6, img: สันคอหมูสไลด์, name: 'สันคอหมูสไลด์' },
+        { id: 7, img: เนื้อวัวหมักซอส, name: 'เนื้อวัวหมักซอส' },
+        { id: 8, img: เบคอนสไลด์, name: 'เบคอนสไลด์' },
       ],
     },
     {
       header: 'Header',
       menus: [
-        { id: 1, img: testImg, name: 'testtestname' },
-        { id: 2, img: testImg, name: 'testtestname' },
+        { id: 1, img: เนื้อวัวสไลด์, name: 'เนื้อวัวสไลด์' },
+        { id: 2, img: testImg, name: 'testImg' },
       ],
     },
     {
       header: 'Header',
       menus: [
-        { id: 1, img: testImg, name: 'testtestname' },
-        { id: 2, img: testImg, name: 'testtestname' },
-        { id: 3, img: testImg, name: 'testtestname' },
-        { id: 4, img: testImg, name: 'testtestname' },
-        { id: 5, img: testImg, name: 'testtestname' },
-        { id: 6, img: testImg, name: 'testtestname' },
-        { id: 7, img: testImg, name: 'testtestname' },
-        { id: 8, img: testImg, name: 'testtestname' },
+        { id: 1, img: หมุสามชั้น, name: 'หมุสามชั้น' },
+        { id: 2, img: ตับหมูสไลด์, name: 'ตับหมูสไลด์' },
+        { id: 3, img: เนื้อไก่โอไดมะ, name: 'เนื้อไก่โอไดมะ' },
       ],
     },
     {
       header: 'Header',
       menus: [
-        { id: 1, img: testImg, name: 'testtestname' },
-        { id: 2, img: testImg, name: 'testtestname' },
-        { id: 3, img: testImg, name: 'testtestname' },
-        { id: 4, img: testImg, name: 'testtestname' },
-        { id: 5, img: testImg, name: 'testtestname' },
-        { id: 6, img: testImg, name: 'testtestname' },
-        { id: 7, img: testImg, name: 'testtestname' },
-        { id: 8, img: testImg, name: 'testtestname' },
+        { id: 1, img: กุ้ง, name: 'กุ้ง' },
+        { id: 2, img: หอยเชลล์, name: 'หอยเชลล์' },
+        { id: 3, img: หมึกสด, name: 'หมึกสด' },
+        { id: 4, img: ปูม้า, name: 'ปูม้า' },
+        { id: 5, img: หอยแมลงภู่, name: 'หอยแมลงภู่' },
+        { id: 6, img: ปลาดอลลี่, name: 'ปลาดอลลี่' },
       ],
     },
     {
       header: 'Header',
       menus: [
-        { id: 1, img: testImg, name: 'testtestname' },
-        { id: 2, img: testImg, name: 'testtestname' },
-        { id: 3, img: testImg, name: 'testtestname' },
-        { id: 4, img: testImg, name: 'testtestname' },
-        { id: 5, img: testImg, name: 'testtestname' },
-        { id: 6, img: testImg, name: 'testtestname' },
-        { id: 7, img: testImg, name: 'testtestname' },
-        { id: 8, img: testImg, name: 'testtestname' },
+        { id: 1, img: แองกรี้เบิร์ด, name: 'แองกรี้เบิร์ด' },
+        { id: 2, img: ชิคุวะปูอัด, name: 'ชิคุวะปูอัด' },
+        { id: 3, img: ลูกชิ้นกุ้งมังกร, name: 'ลูกชิ้นกุ้งมังกร' },
+        { id: 4, img: มอนซัง, name: 'มอนซัง' },
+        { id: 5, img: testImg, name: 'testImg' },
+        { id: 6, img: เต้าหูขาว, name: 'เต้าหูขาว' },
+        { id: 7, img: เต้าหู้, name: 'เต้าหู้' },
       ],
     },
     {
       header: 'Header',
       menus: [
-        { id: 1, img: testImg, name: 'testtestname' },
-        { id: 2, img: testImg, name: 'testtestname' },
-        { id: 3, img: testImg, name: 'testtestname' },
-        { id: 4, img: testImg, name: 'testtestname' },
-        { id: 5, img: testImg, name: 'testtestname' },
-        { id: 6, img: testImg, name: 'testtestname' },
-        { id: 7, img: testImg, name: 'testtestname' },
-        { id: 8, img: testImg, name: 'testtestname' },
+        { id: 1, img: ผักกาดขาว, name: 'ผักกาดขาว' },
+        { id: 2, img: ฮ่องเต้น้อย, name: 'ฮ่องเต้น้อย' },
+        { id: 3, img: ผักบุ้ง, name: 'ผักบุ้ง' },
+        { id: 4, img: ขึ้นช่าย, name: 'ขึ้นช่าย' },
+        { id: 5, img: ข้าวโพดอ่อน, name: 'ข้าวโพดอ่อน' },
+        { id: 6, img: สาหร่ายวากาเมะ, name: 'สาหร่ายวากาเมะ' },
+        { id: 7, img: ยำสาหร่าย, name: 'ยำสาหร่าย' },
+        { id: 8, img: มาม่า, name: 'มาม่า' },
+        { id: 9, img: วุ้นเส้น, name: 'วุ้นเส้น' },
+        { id: 10, img: บะหมี่หยก, name: 'บะหมี่หยก' },
+        { id: 11, img: ชีส, name: 'ชีส' },
+        { id: 12, img: ไข่ไก่, name: 'ไข่ไก่' },
       ],
     },
   ]

@@ -4,6 +4,9 @@ const nextConfig = {
     appDir: true,
   },
   reactStrictMode: false,
+  images: {
+    formats: ['image/webp'],
+  },
 }
 
 module.exports = nextConfig
