@@ -46,7 +46,7 @@ export default function SectionFindUs() {
   ]
   return (
     <>
-      <div className='findUs-header'>Find Us</div>
+      {/* <div className='findUs-header'>Find Us</div> */}
       {items.map((item, index) => (
         <FindUsCard key={index} item={item} />
       ))}

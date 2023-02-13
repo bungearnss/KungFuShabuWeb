@@ -45,7 +45,7 @@ import MenusCard from './menusCard'
 export default function SectionMenus() {
   const items = [
     {
-      header: 'Header',
+      header: 'FAMOUS',
       menus: [
         { id: 1, img: ลิ้นวัว, name: 'ลิ้นวัว' },
         { id: 2, img: แซลม่อนดอง, name: 'แซลม่อนดอง' },
@@ -55,7 +55,7 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Header',
+      header: 'RECOMMEND',
       menus: [
         { id: 1, img: หมูสไลด์เกียวโต, name: 'หมูสไลด์เกียวโต' },
         { id: 2, img: หมูฟูจิ, name: 'หมูฟูจิ' },
@@ -68,14 +68,14 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Header',
+      header: 'Beef',
       menus: [
         { id: 1, img: เนื้อวัวสไลด์, name: 'เนื้อวัวสไลด์' },
         { id: 2, img: testImg, name: 'testImg' },
       ],
     },
     {
-      header: 'Header',
+      header: 'Pork&Chicken',
       menus: [
         { id: 1, img: หมุสามชั้น, name: 'หมุสามชั้น' },
         { id: 2, img: ตับหมูสไลด์, name: 'ตับหมูสไลด์' },
@@ -83,7 +83,7 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Header',
+      header: 'Seafood',
       menus: [
         { id: 1, img: กุ้ง, name: 'กุ้ง' },
         { id: 2, img: หอยเชลล์, name: 'หอยเชลล์' },
@@ -94,7 +94,7 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Header',
+      header: 'Meatball',
       menus: [
         { id: 1, img: แองกรี้เบิร์ด, name: 'แองกรี้เบิร์ด' },
         { id: 2, img: ชิคุวะปูอัด, name: 'ชิคุวะปูอัด' },
@@ -106,7 +106,7 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Header',
+      header: 'Vegetable',
       menus: [
         { id: 1, img: ผักกาดขาว, name: 'ผักกาดขาว' },
         { id: 2, img: ฮ่องเต้น้อย, name: 'ฮ่องเต้น้อย' },
@@ -126,7 +126,7 @@ export default function SectionMenus() {
 
   return (
     <>
-      <div className='menus-header'>Menus</div>
+      {/* <div className='menus-header'>Menus</div> */}
       {items.map((item, index) => (
         <div key={index} className='menus-list'>
           <div className='menu-header'>{item.header}</div>

@@ -18,51 +18,62 @@ export default function SectionContact() {
     <>
       <div className='contact-info'>
         <div className='contact-header'>Address</div>
-        <div className='contact-location'>Nonthaburi</div>
-        <div className='contact-detail'>
-          Hours: Monday - Thursday: 12.00 - 23.00 Friday - Sunday 12.00 - 00.30
-        </div>
-        <div className='contact-detail'>
-          Location: 11/11-12 Moo 3, Pimolrach, Bangbuathong, Nonthaburi 11110
-        </div>
-        <div className='contact-location'>Khon Kaen</div>
-        <div className='contact-detail'>
-          Hours: Monday - Thursday: 12.00 - 23.00 Friday - Sunday 12.00 - 00.30
-        </div>
-        <div className='contact-detail'>
-          Location: 107 Moo 12, Mueng Kao, Mueng Khon Kaen, Khon Kaen 40000
-        </div>
-        <div className='contact-location'>Chiangmai</div>
-        <div className='contact-detail'>
-          Hours: Monday - Thursday: 12.00 - 23.00 Friday - Sunday 12.00 - 00.30
-        </div>
-        <div className='contact-detail'>
-          Location: 400/19 Chiangmai-Lampang road, Fahham, Mueng Chiangmai,
-          Chiangmai 50200
-        </div>
-        <div className='contact-header'>Contact</div>
-        <div className='contact-flex'>
-          <div className='contact-icon'>
-            <Image src={Tel} alt='' /> :
+        <div>
+          <div className='contact-location'>Nonthaburi</div>
+          <div className='contact-detail'>
+            Hours: Monday - Thursday: 12.00 - 23.00 Friday - Sunday 12.00 -
+            00.30
           </div>
-          <a className='contact-detail' href='088-999-2585'>
-            {' '}
-            088-999-2585, 0948530101{' '}
-          </a>
-        </div>
-        <div className='contact-flex'>
-          <div className='contact-icon'>
-            <Image src={Facebook} alt='' /> :
+          <div className='contact-detail'>
+            Location: 11/11-12 Moo 3, Pimolrach, Bangbuathong, Nonthaburi 11110
           </div>
-          <a
-            className='contact-detail'
-            href='https://www.facebook.com/kungfugrillshabu'
-          >
-            https://www.facebook.com/kungfugrillshabu
-          </a>
+        </div>
+        <div>
+          <div className='contact-location'>Khon Kaen</div>
+          <div className='contact-detail'>
+            Hours: Monday - Thursday: 12.00 - 23.00 Friday - Sunday 12.00 -
+            00.30
+          </div>
+          <div className='contact-detail'>
+            Location: 107 Moo 12, Mueng Kao, Mueng Khon Kaen, Khon Kaen 40000
+          </div>
+        </div>
+        <div>
+          <div className='contact-location'>Chiangmai</div>
+          <div className='contact-detail'>
+            Hours: Monday - Thursday: 12.00 - 23.00 Friday - Sunday 12.00 -
+            00.30
+          </div>
+          <div className='contact-detail'>
+            Location: 400/19 Chiangmai-Lampang road, Fahham, Mueng Chiangmai,
+            Chiangmai 50200
+          </div>
+        </div>
+        <div>
+          <div className='contact-header'>Contact</div>
+          <div className='contact-flex'>
+            <div className='contact-icon'>
+              <Image src={Tel} alt='' /> :
+            </div>
+            <a className='contact-detail' href='088-999-2585'>
+              {' '}
+              088-999-2585, 0948530101{' '}
+            </a>
+          </div>
+          <div className='contact-flex'>
+            <div className='contact-icon'>
+              <Image src={Facebook} alt='' /> :
+            </div>
+            <a
+              className='contact-detail'
+              href='https://www.facebook.com/kungfugrillshabu'
+            >
+              https://www.facebook.com/kungfugrillshabu
+            </a>
+          </div>
         </div>
       </div>
-      <div className='contact-map'>
+      {/* <div className='contact-map'>
         <GoogleMapReact
           bootstrapURLKeys={{ key: '' }}
           center={defaultProps.center}
@@ -77,7 +88,7 @@ export default function SectionContact() {
           <AnyReactComponent {...defaultProps.khonkaen} text={'KhonKaen'} />
           <AnyReactComponent {...defaultProps.chiangmai} text={'Chiangmai'} />
         </GoogleMapReact>
-      </div>
+      </div> */}
     </>
   )
 }

@@ -5,8 +5,6 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import $ from 'jquery'
 
-var position = 0
-
 export default function SectionHome() {
   const items = [
     { id: 0, imgDesktop: testImg, imgMobile: testImg },
@@ -14,6 +12,10 @@ export default function SectionHome() {
     { id: 2, imgDesktop: testImg, imgMobile: testImg },
     { id: 3, imgDesktop: testImg2, imgMobile: testImg },
   ]
+  const [current, setPosition] = useState(0)
+  const timer = setInterval(() => {
+    nextSlide()
+  }, [3000])
 
   // useEffect(() => {
   //   console.log('test')
@@ -25,30 +27,19 @@ export default function SectionHome() {
   // })
 
   useEffect(() => {
-    setInterval(() => {
-      nextSlide()
-    }, [3000])
-  }, [position])
+    console.log('inin')
+    timer
+    return () => clearInterval(timer)
+  }, [current])
 
   function nextSlide() {
-    position = $('.slider').find('.show').index() + 1
-    if (position > items.length - 1) position = 0
-
-    changeCarousel()
+    setPosition((prev) => (prev + 1) % items.length)
+    clearInterval(timer)
   }
 
   function prevSlide() {
-    position = $('.slider').find('.show').index() - 1
-    if (position < 0) position = items.length - 1
-
-    changeCarousel()
-  }
-
-  function changeCarousel() {
-    $('.slider').find('.show').removeClass('show').fadeOut()
-    $('.slider').find('> div').eq(position).fadeIn(800).addClass('show')
-    $('.dot-bar').find('.active').removeClass('active')
-    $('.dot-bar').find(`.dot#${position}`).addClass('active')
+    setPosition((prev) => Math.abs((prev - 1) % items.length))
+    clearInterval(timer)
   }
 
   return (
@@ -58,6 +49,7 @@ export default function SectionHome() {
           <Image
             src={window.innerWidth > 768 ? item.imgDesktop : item.imgMobile}
             alt=''
+            className={`${item.id == current ? 'show' : ''}`}
           />
         </div>
       ))}
@@ -67,7 +59,7 @@ export default function SectionHome() {
           <div
             id={item.id}
             key={item.id}
-            className='dot'
+            className={`dot ${item.id == current ? 'active' : ''}`}
             onClick={(e) => {
               position = e.target.id
               changeCarousel()
