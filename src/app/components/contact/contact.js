@@ -1,5 +1,8 @@
 import GoogleMapReact from 'google-map-react'
+import Image from 'next/image'
 import React from 'react'
+import Facebook from '../../../../assets/images/facebook.svg'
+import Tel from '../../../../assets/images/tel.svg'
 
 const AnyReactComponent = ({ text }) => <div className='marker'>{text}</div>
 
@@ -39,12 +42,22 @@ export default function SectionContact() {
         </div>
         <div className='contact-header'>Contact</div>
         <div className='contact-flex'>
-          <div className='contact-location'>Tel:</div>
-          <a className='contact-detail'> 088-999-2585, 0948530101 </a>
+          <div className='contact-icon'>
+            <Image src={Tel} alt='' /> :
+          </div>
+          <a className='contact-detail' href='088-999-2585'>
+            {' '}
+            088-999-2585, 0948530101{' '}
+          </a>
         </div>
         <div className='contact-flex'>
-          <div className='contact-location'>Facebook:</div>
-          <a className='contact-detail'>
+          <div className='contact-icon'>
+            <Image src={Facebook} alt='' /> :
+          </div>
+          <a
+            className='contact-detail'
+            href='https://www.facebook.com/kungfugrillshabu'
+          >
             https://www.facebook.com/kungfugrillshabu
           </a>
         </div>
