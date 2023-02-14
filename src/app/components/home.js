@@ -13,9 +13,7 @@ export default function SectionHome() {
     { id: 3, imgDesktop: testImg2, imgMobile: testImg },
   ]
   const [current, setPosition] = useState(0)
-  const timer = setInterval(() => {
-    nextSlide()
-  }, [3000])
+  const [mouseOver, setMouseOver] = useState(false)
 
   // useEffect(() => {
   //   console.log('test')
@@ -27,32 +25,41 @@ export default function SectionHome() {
   // })
 
   useEffect(() => {
-    console.log('inin')
-    timer
-    return () => clearInterval(timer)
-  }, [current])
+    if (mouseOver) {
+      console.log('inin')
+      const timer = setInterval(() => {
+        nextSlide()
+      }, [3000])
+      return () => clearInterval(timer)
+    } else {
+      setPosition(0)
+    }
+  }, [mouseOver])
 
   function nextSlide() {
     setPosition((prev) => (prev + 1) % items.length)
-    clearInterval(timer)
   }
 
   function prevSlide() {
     setPosition((prev) => Math.abs((prev - 1) % items.length))
-    clearInterval(timer)
   }
 
   return (
-    <div className='slider'>
-      {items.map((item) => (
-        <div id={item.id} key={item.id} className='image'>
-          <Image
-            src={window.innerWidth > 768 ? item.imgDesktop : item.imgMobile}
-            alt=''
-            className={`${item.id == current ? 'show' : ''}`}
-          />
-        </div>
-      ))}
+    <div
+      className='slider'
+      onMouseOver={() => setMouseOver(true)}
+      onMouseOut={() => setMouseOver(false)}
+    >
+      <div className='image'>
+        <Image
+          src={
+            window.innerWidth > 768
+              ? items[current].imgDesktop
+              : items[current].imgMobile
+          }
+          alt=''
+        />
+      </div>
 
       <div className='dot-bar'>
         {items.map((item) => (

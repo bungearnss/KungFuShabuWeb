@@ -6,6 +6,20 @@ $brown-color: #f8dabc;
 $darkbrown-color: #b68a68;
 $error-color: #ba1200;
 
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('../fonts/Vollkorn-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('../fonts/Vollkorn-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,9 +33,16 @@ body {
   font-family: 'Noto Sans Thai', sans-serif;
   font-family: 'Oswald', sans-serif;
   font-family: 'Prompt', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Vollkorn', sans-serif;
   overflow-y: auto;
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: $white-color;
+  position: relative;
+  display: block;
 }
 
 .header {
@@ -408,7 +429,7 @@ body {
 .contact {
   .contact-info {
     width: 100vw;
-    padding: 2rem 0rem 2rem 2rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -449,6 +470,10 @@ body {
       font-size: 0.75rem;
       line-height: 2.5rem;
       color: #ffffff;
+      a {
+        font-size: 1rem !important;
+        text-align: right;
+      }
     }
     .contact-flex {
       display: flex;
@@ -459,6 +484,260 @@ body {
     width: 60vw;
     height: 50vw;
     padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+    .icon {
+      width: 60px;
+      height: 60px;
+      img {
+        height: 60px;
+        width: 60px;
+      }
+    }
+    .menu {
+      display: block;
+      transition: 0.3s;
+      .hamburger {
+        display: block;
+        text-align: right;
+        padding-right: 1rem;
+      }
+
+      a {
+        display: none;
+        line-height: 60px;
+        text-align: right;
+        padding-right: 1rem;
+        transition: 0.3s;
+        &::after {
+          transform-origin: right;
+          z-index: 10;
+          left: auto;
+          right: 1rem;
+          bottom: 0px;
+        }
+      }
+      .line::after {
+        transform: scaleX(1);
+      }
+      &.show {
+        a {
+          transition: 0.3s;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .home {
+    .slider {
+      .dot-bar {
+        gap: 1rem;
+        height: 0.5rem;
+        .dot {
+          width: 0.5rem;
+          height: 0.5rem;
+        }
+        .dot.active {
+          width: 1.5rem;
+          height: 0.5rem;
+        }
+      }
+    }
+  }
+  .findUs {
+    padding: 1rem 0;
+    .findUs-header {
+      position: absolute;
+      width: 50vw;
+      height: 10vw;
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+    .findUs-card {
+      margin-top: 10vw;
+      width: 90vw;
+      height: 130vw;
+      transform: translate(0%, 0%);
+      position: relative;
+      .findUs-box {
+        position: absolute;
+        top: 47.5vw;
+        left: 5vw;
+        transform: translate(0%, -50%);
+        width: 80vw;
+        height: 80vw;
+        .findUs-rect {
+          width: 70vw;
+          height: 70vw;
+          &:nth-child(2) {
+            width: 70vw;
+            height: 70vw;
+          }
+        }
+        .findUs-img {
+          width: 80vw;
+          height: 60vw;
+          img {
+            width: calc(80vw * 0.9);
+            height: calc(60vw * 0.9);
+          }
+        }
+      }
+      .findUs-gallery {
+        display: flex;
+        top: 15vw;
+        width: 90vw;
+        height: 15vw;
+        gap: 3.3vw;
+        div {
+          margin-bottom: 0;
+        }
+        img {
+          width: 20vw;
+          height: 15vw;
+        }
+      }
+      .findUs-detail {
+        top: 100vw;
+        left: 15vw;
+        width: 60vw;
+        height: 75vw;
+        box-shadow: 0px -40px 24px -20px rgba(0, 0, 0, 0.4);
+        padding: 1rem;
+        .findUs-location {
+          font-size: 1.75rem;
+        }
+        .findUs-det {
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+          &:nth-child(2n + 1) {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+    .right {
+      .findUs-detail {
+        left: auto;
+        right: 15vw;
+        box-shadow: 0px -40px 24px -20px rgba(0, 0, 0, 0.4);
+        text-align: left;
+      }
+    }
+  }
+  .menus {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    .menus-header {
+      width: 50vw;
+      height: 10vw;
+      font-size: 1.5rem;
+      padding: 0 1rem;
+      margin-left: -1rem;
+      display: flex;
+    }
+    .menus-list {
+      height: fit-content;
+      .menu-header {
+        font-size: 2rem;
+      }
+      .menus-detail {
+        flex-wrap: wrap;
+        .menus-card {
+          width: calc((((100vw) / 3) - 1.25rem));
+          height: calc((((100vw) / 3) - 1.25rem));
+          &::before {
+            width: calc((((100vw) / 3) - 1.25rem) * 0.8);
+            height: calc((((100vw) / 3) - 1.25rem) * 0.8);
+            margin: calc((((100vw) / 3) - 1.25rem) * 0.1);
+          }
+          .menu-img {
+            width: calc(((100vw) / 3) - 1.25rem);
+            height: calc(((100vw) / 3) - 1.25rem);
+          }
+          .menu-name {
+            padding: calc((((100vw) / 3) - 1.25rem) * 0.05);
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    display: block;
+    .contact-info {
+      flex-direction: column;
+      width: 100vw;
+      padding: 1rem 1rem 0rem 1rem;
+      .contact-detail {
+        font-size: 1rem;
+      }
+      .contact-flex {
+        display: block;
+        gap: 0rem;
+      }
+    }
+    .contact-map {
+      width: 100vw;
+      height: 140vw;
+      padding: 1rem;
+    }
+  }
+}
+
+.marker {
+  transform: translateY(-100%);
+  background: $error-color;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $white-color;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  border-radius: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    95% 85%,
+    55% 85%,
+    50% 100%,
+    45% 85%,
+    5% 85%,
+    0 75%
+  );
+  &::after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    color: $white-color;
+    position: absolute;
+    bottom: -1rem;
+    left: calc(50% - 0.5rem);
+    z-index: 9999;
+  }
+}
+
+@media (max-width: 1100px) {
+  .findUs {
+    .findUs-card {
+      .findUs-detail {
+        .findUs-det {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          &:nth-child(2n + 1) {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
   }
 }
 

@@ -22,14 +22,6 @@ export default function Home() {
     const position = window.pageYOffset
 
     setScrollPosition(position)
-
-    console.log(
-      home.current.clientHeight,
-      findUs.current.clientHeight,
-      menus.current.clientHeight,
-      contact.current.clientHeight
-    )
-    console.log(position / window.innerHeight, position / window.innerWidth)
     if (position < home.current.clientHeight) {
       $('.menu').find('.line').removeClass('line')
       $('.menu').find('> #home').addClass('line')

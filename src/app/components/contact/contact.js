@@ -26,6 +26,14 @@ export default function SectionContact() {
           </div>
           <div className='contact-detail'>
             Location: 11/11-12 Moo 3, Pimolrach, Bangbuathong, Nonthaburi 11110
+            <span>
+              <a
+                className='contact-detail'
+                href='https://goo.gl/maps/CbkrVotiDskRyN6LA'
+              >
+                See More
+              </a>
+            </span>
           </div>
         </div>
         <div>
@@ -36,6 +44,14 @@ export default function SectionContact() {
           </div>
           <div className='contact-detail'>
             Location: 107 Moo 12, Mueng Kao, Mueng Khon Kaen, Khon Kaen 40000
+            <span>
+              <a
+                className='contact-detail'
+                href='https://goo.gl/maps/6GjTTJejQy3BETfE8'
+              >
+                See More
+              </a>
+            </span>
           </div>
         </div>
         <div>
@@ -47,6 +63,14 @@ export default function SectionContact() {
           <div className='contact-detail'>
             Location: 400/19 Chiangmai-Lampang road, Fahham, Mueng Chiangmai,
             Chiangmai 50200
+            <span>
+              <a
+                className='contact-detail'
+                href='https://goo.gl/maps/2j5wVcnoZuHSP6yB8'
+              >
+                See More
+              </a>
+            </span>
           </div>
         </div>
         <div>
