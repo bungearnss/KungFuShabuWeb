@@ -71,14 +71,14 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Beef',
+      header: 'BEEF',
       menus: [
         { id: 1, img: เนื้อวัวสไลด์, name: 'เนื้อวัวสไลด์' },
         { id: 2, img: เนื้อวัวหมักซอส, name: 'เนื้อวัวหมักซอส' },
       ],
     },
     {
-      header: 'Pork&Chicken',
+      header: 'PORK & CHICKEN',
       menus: [
         { id: 1, img: หมุสามชั้น, name: 'หมุสามชั้น' },
         { id: 2, img: ตับหมูสไลด์, name: 'ตับหมูสไลด์' },
@@ -86,7 +86,7 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Seafood',
+      header: 'SEAFOOD',
       menus: [
         { id: 1, img: กุ้ง, name: 'กุ้ง' },
         { id: 2, img: หอยเชลล์, name: 'หอยเชลล์' },
@@ -97,7 +97,7 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Meatball',
+      header: 'MEATBALL',
       menus: [
         { id: 1, img: แองกรี้เบิร์ด, name: 'แองกรี้เบิร์ด' },
         { id: 2, img: ชิคุวะปูอัด, name: 'ชิคุวะปูอัด' },
@@ -110,7 +110,7 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Vegetable',
+      header: 'VEGETABLE',
       menus: [
         { id: 1, img: ผักกาดขาว, name: 'ผักกาดขาว' },
         { id: 2, img: ฮ่องเต้น้อย, name: 'ฮ่องเต้น้อย' },
