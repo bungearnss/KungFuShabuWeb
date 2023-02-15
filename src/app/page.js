@@ -101,7 +101,7 @@ export default function Home() {
               handleClick('home')
             }}
           >
-            Home
+            HOME
           </a>
           <a
             className='menu-list'
@@ -111,7 +111,7 @@ export default function Home() {
               handleClick('findUs')
             }}
           >
-            Find Us
+            FIND US
           </a>
           <a
             className='menu-list'
@@ -121,7 +121,7 @@ export default function Home() {
               handleClick('menus')
             }}
           >
-            Menus
+            MENUS
           </a>
           <a
             className='menu-list'
@@ -131,7 +131,7 @@ export default function Home() {
               handleClick('contact')
             }}
           >
-            Contact
+            CONTACT
           </a>
         </div>
       </div>

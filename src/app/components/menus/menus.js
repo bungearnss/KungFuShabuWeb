@@ -52,7 +52,7 @@ export default function SectionMenus() {
       header: 'FAMOUS',
       menus: [
         { id: 1, img: ลิ้นวัว, name: 'ลิ้นวัว' },
-        { id: 2, img: แซลม่อนดอง, name: 'แซลม่อนดอง' },
+        { id: 2, img: แซลม่อนดอง, name: 'แซลมอนดอง' },
         { id: 3, img: เสือร้องไห้, name: 'เสือร้องไห้' },
         { id: 4, img: ปูไข่ดอง, name: 'ปูไข่ดอง' },
         { id: 5, img: ไข่ปลาหมึก, name: 'ไข่ปลาหมึก' },
@@ -71,22 +71,22 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Beef',
+      header: 'BEEF',
       menus: [
         { id: 1, img: เนื้อวัวสไลด์, name: 'เนื้อวัวสไลด์' },
         { id: 2, img: เนื้อวัวหมักซอส, name: 'เนื้อวัวหมักซอส' },
       ],
     },
     {
-      header: 'Pork&Chicken',
+      header: 'PORK & CHICKEN',
       menus: [
-        { id: 1, img: หมุสามชั้น, name: 'หมุสามชั้น' },
+        { id: 1, img: หมุสามชั้น, name: 'หมูสามชั้นฮอกไกโด' },
         { id: 2, img: ตับหมูสไลด์, name: 'ตับหมูสไลด์' },
         { id: 3, img: เนื้อไก่โอไดมะ, name: 'เนื้อไก่โอไดมะ' },
       ],
     },
     {
-      header: 'Seafood',
+      header: 'SEAFOOD',
       menus: [
         { id: 1, img: กุ้ง, name: 'กุ้ง' },
         { id: 2, img: หอยเชลล์, name: 'หอยเชลล์' },
@@ -97,27 +97,27 @@ export default function SectionMenus() {
       ],
     },
     {
-      header: 'Meatball',
+      header: 'MEATBALL',
       menus: [
-        { id: 1, img: แองกรี้เบิร์ด, name: 'แองกรี้เบิร์ด' },
+        { id: 1, img: แองกรี้เบิร์ด, name: 'ลูกชิ้นแองกรี้เบิร์ด' },
         { id: 2, img: ชิคุวะปูอัด, name: 'ชิคุวะปูอัด' },
         { id: 3, img: ลูกชิ้นกุ้งมังกร, name: 'ลูกชิ้นกุ้งมังกร' },
         { id: 4, img: มอนซัง, name: 'ไซมอนซัง' },
         { id: 5, img: คอมโบฟิชบัน, name: 'คอมโบฟิชบัน' },
-        { id: 6, img: เต้าหูขาว, name: 'เต้าหูขาว' },
-        { id: 7, img: เต้าหู้, name: 'เต้าหู้' },
+        { id: 6, img: เต้าหูขาว, name: 'เต้าหู้ขาว' },
+        { id: 7, img: เต้าหู้, name: 'เต้าหู้ไข่' },
         { id: 8, img: เต้าหู้ปลา, name: 'เต้าหู้ปลา' },
       ],
     },
     {
-      header: 'Vegetable',
+      header: 'VEGETABLE',
       menus: [
         { id: 1, img: ผักกาดขาว, name: 'ผักกาดขาว' },
         { id: 2, img: ฮ่องเต้น้อย, name: 'ฮ่องเต้น้อย' },
         { id: 3, img: ผักบุ้ง, name: 'ผักบุ้ง' },
-        { id: 4, img: ขึ้นช่าย, name: 'ขึ้นช่าย' },
+        { id: 4, img: ขึ้นช่าย, name: 'คื่นฉ่าย' },
         { id: 5, img: ข้าวโพดอ่อน, name: 'ข้าวโพดอ่อน' },
-        { id: 6, img: กระหล่ำฝอย, name: 'กระหล่ำฝอย' },
+        { id: 6, img: กระหล่ำฝอย, name: 'กะหล่ำปลีฝอย' },
         { id: 7, img: สาหร่ายวากาเมะ, name: 'สาหร่ายวากาเมะ' },
         { id: 8, img: ยำสาหร่าย, name: 'ยำสาหร่าย' },
         { id: 9, img: มาม่า, name: 'มาม่า' },

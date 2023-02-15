@@ -17,15 +17,20 @@ export default function SectionContact() {
   return (
     <>
       <div className='contact-info'>
-        <div className='contact-header'>Address</div>
+        <div className='contact-header'>ADDRESS</div>
         <div>
           <div className='contact-location'>Nonthaburi</div>
           <div className='contact-detail'>
-            Hours: Monday - Thursday: 12.00 - 23.00 Friday - Sunday 12.00 -
-            00.30
+            <strong>Hours:</strong> Monday - Thursday 12.00 - 23.00
           </div>
           <div className='contact-detail'>
-            Location: 11/11-12 Moo 3, Pimolrach, Bangbuathong, Nonthaburi 11110
+            &emsp; &emsp; &emsp;Friday - Sunday 12.00 - 00.30
+          </div>
+          <div className='contact-detail'>
+            <strong>Location:</strong> 11/11-12 Moo 3, Pimolrach, Bangbuathong,
+            <div>
+                Nonthaburi 11110
+            </div>
             <span>
               <a
                 className='contact-detail'
@@ -39,11 +44,16 @@ export default function SectionContact() {
         <div>
           <div className='contact-location'>Khon Kaen</div>
           <div className='contact-detail'>
-            Hours: Monday - Thursday: 12.00 - 23.00 Friday - Sunday 12.00 -
-            00.30
+            <strong>Location:</strong> Monday - Thursday 12.00 - 23.00 
           </div>
           <div className='contact-detail'>
-            Location: 107 Moo 12, Mueng Kao, Mueng Khon Kaen, Khon Kaen 40000
+            &emsp; &emsp; &emsp; &emsp;Friday - Sunday 12.00 - 00.30
+          </div>
+          <div className='contact-detail'>
+            <strong>Location:</strong> 107 Moo 12, Mueng Kao, Mueng Khon Kaen,
+            <div>
+                Khon Kaen 40000
+            </div>
             <span>
               <a
                 className='contact-detail'
@@ -57,12 +67,16 @@ export default function SectionContact() {
         <div>
           <div className='contact-location'>Chiangmai</div>
           <div className='contact-detail'>
-            Hours: Monday - Thursday: 12.00 - 23.00 Friday - Sunday 12.00 -
-            00.30
+            <strong>Hours:</strong> Monday - Thursday 12.00 - 23.00
           </div>
           <div className='contact-detail'>
-            Location: 400/19 Chiangmai-Lampang road, Fahham, Mueng Chiangmai,
-            Chiangmai 50200
+            &emsp; &emsp; &emsp;Friday - Sunday 12.00 - 00.30
+          </div>
+          <div className='contact-detail'>
+            <strong>Location:</strong>400/19 Chiangmai-Lampang road, Fahham, Mueng Chiangmai,
+            <div>
+                Chiangmai 50200
+            </div>
             <span>
               <a
                 className='contact-detail'
@@ -74,14 +88,14 @@ export default function SectionContact() {
           </div>
         </div>
         <div>
-          <div className='contact-header'>Contact</div>
+          <div className='contact-header'>CONTACT</div>
           <div className='contact-flex'>
             <div className='contact-icon'>
               <Image src={Tel} alt='' /> :
             </div>
-            <a className='contact-detail' href='088-999-2585'>
+            <a className='contact-detail'>
               {' '}
-              088-999-2585, 0948530101{' '}
+              088-999-2585, 094-853-0101{' '}
             </a>
           </div>
           <div className='contact-flex'>
