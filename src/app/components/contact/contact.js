@@ -73,7 +73,7 @@ export default function SectionContact() {
             &emsp; &emsp; &emsp;Friday - Sunday 12.00 - 00.30
           </div>
           <div className='contact-detail'>
-            <strong>Location:</strong>400/19 Chiangmai-Lampang road, Fahham, Mueng Chiangmai,
+            <strong>Location:</strong> 400/19 Chiangmai-Lampang road, Fahham, Mueng Chiangmai,
             <div>
                 Chiangmai 50200
             </div>
