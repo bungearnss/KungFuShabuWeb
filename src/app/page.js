@@ -81,7 +81,7 @@ export default function Home() {
     <main>
       <div className='header'>
         <div className='icon'>
-          <Image src={Logo} alt='' />
+          <Image src={Logo} alt='' priority placeholder='blur' />
         </div>
         <div className={`menu ${showMenu ? 'show' : ''}`}>
           <div className='hamburger'>
