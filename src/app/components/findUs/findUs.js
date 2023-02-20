@@ -12,12 +12,12 @@ import k04 from "../../../../assets/images/locations/khonkaen/k04.jpg";
 
 import c01 from "../../../../assets/images/locations/chiangmai/c01.jpg";
 import c02 from "../../../../assets/images/locations/chiangmai/c02.jpg";
-import c03 from "../../../../assets/images/locations/chiangmai/c03.jpg";
 import c04 from "../../../../assets/images/locations/chiangmai/c04.jpg";
+import c05 from "../../../../assets/images/locations/chiangmai/c05.jpg";
 
 const nonImage = [non01, non02, non03, non04];
 const khonkaenImage = [k01, k02, k03, k04];
-const chiangmaiImage = [c01, c02, c03, c04];
+const chiangmaiImage = [c01, c02, c04, c05];
 
 export default function SectionFindUs() {
   const items = [
@@ -27,9 +27,9 @@ export default function SectionFindUs() {
       detail: [
         "Hours:",
         "Monday - Thursday 12.00 - 23.00 \n Friday - Sunday 12.00 - 00.30",
-        "Location:",
+        "\n Location:",
         "11/11-12 Moo 3, Pimolrach, Bangbuathong, \n Nonthaburi 11110",
-        "Contact:",
+        "\nContact:",
         "088-999-2585, 094-853-0101",
       ],
       imgGal: nonImage,
@@ -40,9 +40,9 @@ export default function SectionFindUs() {
       detail: [
         "Hours:",
         "Monday - Thursday 12.00 - 23.00 \n Friday - Sunday 12.00 - 00.30",
-        "Location:",
+        "\n Location:",
         "107 Moo 12, Mueng Kao, Mueng Khon Kaen, \n Khon Kaen 40000",
-        "Contact:",
+        "\n Contact:",
         "088-999-2585, 094-853-0101",
       ],
       imgGal: khonkaenImage,
@@ -53,9 +53,9 @@ export default function SectionFindUs() {
       detail: [
         "Hours:",
         "Monday - Thursday 12.00 - 23.00 \n Friday - Sunday 12.00 - 00.30",
-        "Location:",
+        "\n Location:",
         "400/19 Chiangmai-Lampang road, Fahham, Mueng Chiangmai, \n Chiangmai 50200",
-        "Contact:",
+        "\n Contact:",
         "088-999-2585, 094-853-0101",
       ],
       imgGal: chiangmaiImage,
