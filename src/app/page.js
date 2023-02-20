@@ -1,6 +1,6 @@
 'use client'
 import '../../assets/styles/main.scss'
-import SectionHome from '@/app/components/home'
+import SectionHome from './components/home'
 import SectionMenus from './components/menus/menus'
 import SectionContact from './components/contact/contact'
 import SectionFindUs from './components/findUs/findUs'
