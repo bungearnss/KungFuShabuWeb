@@ -1,13 +1,23 @@
 import FindUsCard from "./findCard";
-import testImg from "../../../../assets/images/testImg.jpeg";
-import testImg2 from "../../../../assets/images/testImg2.png";
 
 import non01 from "../../../../assets/images/locations/nonthaburi/01.jpg";
 import non02 from "../../../../assets/images/locations/nonthaburi/02.jpg";
 import non03 from "../../../../assets/images/locations/nonthaburi/03.jpg";
 import non04 from "../../../../assets/images/locations/nonthaburi/04.jpg";
 
+import k01 from "../../../../assets/images/locations/khonkaen/k01.jpg";
+import k02 from "../../../../assets/images/locations/khonkaen/k02.jpg";
+import k03 from "../../../../assets/images/locations/khonkaen/k03.jpg";
+import k04 from "../../../../assets/images/locations/khonkaen/k04.jpg";
+
+import c01 from "../../../../assets/images/locations/chiangmai/c01.jpg";
+import c02 from "../../../../assets/images/locations/chiangmai/c02.jpg";
+import c03 from "../../../../assets/images/locations/chiangmai/c03.jpg";
+import c04 from "../../../../assets/images/locations/chiangmai/c04.jpg";
+
 const nonImage = [non01, non02, non03, non04];
+const khonkaenImage = [k01, k02, k03, k04];
+const chiangmaiImage = [c01, c02, c03, c04];
 
 export default function SectionFindUs() {
   const items = [
@@ -35,7 +45,7 @@ export default function SectionFindUs() {
         "Contact:",
         "088-999-2585, 094-853-0101",
       ],
-      imgGal: [testImg2, testImg, testImg2, testImg],
+      imgGal: khonkaenImage,
     },
     {
       id: 3,
@@ -48,12 +58,11 @@ export default function SectionFindUs() {
         "Contact:",
         "088-999-2585, 094-853-0101",
       ],
-      imgGal: [testImg, testImg2, testImg, testImg2],
+      imgGal: chiangmaiImage,
     },
   ];
   return (
     <>
-      {/* <div className='findUs-header'>Find Us</div> */}
       {items.map((item, index) => (
         <FindUsCard key={index} item={item} />
       ))}

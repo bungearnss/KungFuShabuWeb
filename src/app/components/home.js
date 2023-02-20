@@ -1,28 +1,20 @@
 import '../../../assets/styles/main.scss'
-import testImg2 from '../../../assets/images/testImg2.png'
-import testImg from '../../../assets/images/testImg.jpeg'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import $ from 'jquery'
+import ban01 from '../../../assets/images/ban01.webp'
+import ban02 from '../../../assets/images/ban02.webp'
+import ban03 from '../../../assets/images/ban03.webp'
+import ban04 from '../../../assets/images/ban04.jpg'
 
 export default function SectionHome() {
   const items = [
-    { id: 0, imgDesktop: testImg, imgMobile: testImg },
-    { id: 1, imgDesktop: testImg2, imgMobile: testImg },
-    { id: 2, imgDesktop: testImg, imgMobile: testImg },
-    { id: 3, imgDesktop: testImg2, imgMobile: testImg },
+    { id: 0, imgDesktop: ban01, imgMobile: ban01 },
+    { id: 1, imgDesktop: ban02, imgMobile: ban02 },
+    { id: 2, imgDesktop: ban03, imgMobile: ban03 },
+    { id: 3, imgDesktop: ban04, imgMobile: ban04 },
   ]
   const [current, setPosition] = useState(0)
   const [mouseOver, setMouseOver] = useState(false)
-
-  // useEffect(() => {
-  //   console.log('test')
-  //   return () => {
-  //     console.log('test')
-  //     $('div#3').addClass('show')
-  //     $('.dot#3').addClass('active')
-  //   }
-  // })
 
   useEffect(() => {
     if (mouseOver) {
