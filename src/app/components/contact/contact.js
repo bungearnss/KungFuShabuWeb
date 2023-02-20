@@ -79,7 +79,7 @@ export default function SectionContact() {
             <span>
               <a
                 className='contact-detail'
-                href='https://goo.gl/maps/2j5wVcnoZuHSP6yB8'
+                href='https://goo.gl/maps/HYdi71BxM3gbAtKN8'
               >
                 See More
               </a>

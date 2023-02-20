@@ -228,7 +228,7 @@ a {
     .findUs-box {
       position: absolute;
       top: 50%;
-      left: 5vw;
+      left: 15vw;
       transform: translate(0%, -50%);
       width: 50vw;
       height: 50vw;
@@ -271,6 +271,7 @@ a {
     .findUs-gallery {
       position: absolute;
       top: 50%;
+      margin-left: 4vw;
       transform: translate(0%, -50%);
       width: 15vw;
       height: 50vw;
@@ -290,12 +291,15 @@ a {
       transform: translate(0%, -50%);
       position: absolute;
       display: block;
-      left: 50vw;
-      width: 40vw;
-      height: 30vw;
+      left: 61vw;
+      width: 27vw;
+      height: 25vw;
       background: $lightbrown-color;
       box-shadow: -40px 0px 24px -20px rgba(0, 0, 0, 0.4);
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       .findUs-location {
         font-size: 3rem;
         font-weight: bold;
@@ -314,7 +318,7 @@ a {
   .right {
     .findUs-box {
       left: auto;
-      right: 5vw;
+      right: 14vw;
       .findUs-rect {
         transform: translate(-50%, -50%) rotate(-66.81deg);
         &:nth-child(2) {
@@ -323,11 +327,11 @@ a {
       }
     }
     .findUs-gallery {
-      right: 0;
+      right: 3vw;
     }
     .findUs-detail {
       left: auto;
-      right: 50vw;
+      right: 60vw;
       box-shadow: 40px 0px 24px -20px rgba(0, 0, 0, 0.4);
       text-align: right;
     }
