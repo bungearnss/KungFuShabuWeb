@@ -1,5 +1,4 @@
 import '../../../../assets/styles/main.scss'
-import testImg from '../../../../assets/images/menutest.webp'
 import ลิ้นวัว from '../../../../assets/images/ลิ้นวัว.webp'
 import แซลม่อนดอง from '../../../../assets/images/แซลม่อนดอง.webp'
 import เสือร้องไห้ from '../../../../assets/images/เสื้อร้องไห้.webp'

@@ -1,4 +1,3 @@
-import GoogleMapReact from 'google-map-react'
 import Image from 'next/image'
 import React from 'react'
 import Facebook from '../../../../assets/images/facebook.svg'
@@ -111,22 +110,6 @@ export default function SectionContact() {
           </div>
         </div>
       </div>
-      {/* <div className='contact-map'>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: '' }}
-          center={defaultProps.center}
-          zoom={defaultProps.zoom}
-          yesIWantToUseGoogleMapApiInternals
-        >
-          <AnyReactComponent
-            lat={13.915954745624894}
-            lng={100.4017343991802}
-            text={'Nonthaburi'}
-          />
-          <AnyReactComponent {...defaultProps.khonkaen} text={'KhonKaen'} />
-          <AnyReactComponent {...defaultProps.chiangmai} text={'Chiangmai'} />
-        </GoogleMapReact>
-      </div> */}
     </>
   )
 }
