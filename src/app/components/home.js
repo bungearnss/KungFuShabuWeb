@@ -15,16 +15,15 @@ export default function SectionHome() {
   ]
   const [current, setPosition] = useState(0)
   const [mouseOver, setMouseOver] = useState(false)
+  const [windowWidth, setWindowWIdth] = useState(0)
 
   useEffect(() => {
+    setWindowWIdth(window.innerWidth)
     if (mouseOver) {
-      console.log('inin')
       const timer = setInterval(() => {
         nextSlide()
       }, [3000])
       return () => clearInterval(timer)
-    } else {
-      setPosition(0)
     }
   }, [mouseOver])
 
@@ -45,11 +44,13 @@ export default function SectionHome() {
       <div className='image'>
         <Image
           src={
-            window.innerWidth > 768
+            windowWidth > 768
               ? items[current].imgDesktop
               : items[current].imgMobile
           }
           alt=''
+          priority
+          placeholder='blur'
         />
       </div>
 

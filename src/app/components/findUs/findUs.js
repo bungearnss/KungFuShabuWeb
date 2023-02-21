@@ -15,7 +15,13 @@ import c02 from "../../../../assets/images/locations/chiangmai/c02.jpg";
 import c04 from "../../../../assets/images/locations/chiangmai/c04.jpg";
 import c05 from "../../../../assets/images/locations/chiangmai/c05.jpg";
 
-const nonImage = [non01, non02, non03, non04];
+// const nonImage = [
+//   "https://res.cloudinary.com/daw0fwcjj/image/upload/v1676913800/Find%20us/Nonthaburi/gv8bilravmdjrtyugpav.jpg", 
+//   "https://res.cloudinary.com/daw0fwcjj/image/upload/v1676913798/Find%20us/Nonthaburi/g9bzfhrwh52cq3i7fvei.jpg", 
+//   "https://res.cloudinary.com/daw0fwcjj/image/upload/v1676913799/Find%20us/Nonthaburi/wunlc23izjjfwb4qbetl.jpg", 
+//   "https://res.cloudinary.com/daw0fwcjj/image/upload/v1676913797/Find%20us/Nonthaburi/nrpvsv7bcpqnyhgifztu.jpg",
+// ];
+const nonImage = [non01,non02,non03,non04];
 const khonkaenImage = [k01, k02, k03, k04];
 const chiangmaiImage = [c01, c02, c04, c05];
 

@@ -16,12 +16,13 @@ export default function Home() {
   const findUs = useRef(null)
   const menus = useRef(null)
   const contact = useRef(null)
+  const body = useRef(null)
 
   const [scrollPosition, setScrollPosition] = useState(0)
+  
   const handleScroll = () => {
-    const position = window.pageYOffset
-
-    setScrollPosition(position)
+    var position = -body.current.getBoundingClientRect().top
+    
     if (position < home.current.clientHeight) {
       $('.menu').find('.line').removeClass('line')
       $('.menu').find('> #home').addClass('line')
@@ -49,36 +50,18 @@ export default function Home() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
-
+    handleClick(0)
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
-  function handleClick(id) {
-    if (id == 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    } else if (id == 'findUs') {
-      window.scrollTo({ top: home.current.clientHeight, behavior: 'smooth' })
-    } else if (id == 'menus') {
-      window.scrollTo({
-        top: home.current.clientHeight + findUs.current.clientHeight,
-        behavior: 'smooth',
-      })
-    } else {
-      window.scrollTo({
-        top:
-          home.current.clientHeight +
-          findUs.current.clientHeight +
-          menus.current.clientHeight,
-        behavior: 'smooth',
-      })
-    }
-    setShowMenu(false)
+  function handleClick(pixel) {
+    window.scrollTo({ top: pixel, behavior: 'smooth' })
   }
 
   return (
-    <main>
+    <main ref={body}>
       <div className='header'>
         <div className='icon'>
           <Image src={Logo} alt='' priority placeholder='blur' />
@@ -98,7 +81,7 @@ export default function Home() {
             id='home'
             href='#home'
             onClick={() => {
-              handleClick('home')
+              handleClick(0)
             }}
           >
             HOME
@@ -108,7 +91,7 @@ export default function Home() {
             id='findUs'
             href='#findUs'
             onClick={() => {
-              handleClick('findUs')
+              handleClick(home.current.clientHeight)
             }}
           >
             FIND US
@@ -118,7 +101,9 @@ export default function Home() {
             id='menus'
             href='#menus'
             onClick={() => {
-              handleClick('menus')
+              handleClick(
+                home.current.clientHeight + findUs.current.clientHeight
+              )
             }}
           >
             MENUS
@@ -128,7 +113,11 @@ export default function Home() {
             id='contact'
             href='#contact'
             onClick={() => {
-              handleClick('contact')
+              handleClick(
+                home.current.clientHeight +
+                  findUs.current.clientHeight +
+                  menus.current.clientHeight
+              )
             }}
           >
             CONTACT
