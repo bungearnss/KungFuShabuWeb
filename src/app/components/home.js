@@ -5,12 +5,15 @@ import ban01 from '../../../assets/images/ban01.webp'
 import ban02 from '../../../assets/images/ban02.webp'
 import ban03 from '../../../assets/images/ban03.webp'
 import ban04 from '../../../assets/images/ban04.jpg'
+import ban01_mobile from '../../../assets/images/ban02_mobile.webp'
+import ban02_mobile from '../../../assets/images/ban01_mobile.webp'
+import ban03_mobile from '../../../assets/images/ban03_mobile.webp'
 
 export default function SectionHome() {
   const items = [
-    { id: 0, imgDesktop: ban01, imgMobile: ban01 },
-    { id: 1, imgDesktop: ban02, imgMobile: ban02 },
-    { id: 2, imgDesktop: ban03, imgMobile: ban03 },
+    { id: 0, imgDesktop: ban01, imgMobile: ban01_mobile },
+    { id: 1, imgDesktop: ban02, imgMobile: ban02_mobile },
+    { id: 2, imgDesktop: ban03, imgMobile: ban03_mobile },
     { id: 3, imgDesktop: ban04, imgMobile: ban04 },
   ]
   const [current, setPosition] = useState(0)

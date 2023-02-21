@@ -293,7 +293,6 @@ a {
       display: block;
       left: 61vw;
       width: 27vw;
-      height: 25vw;
       background: $lightbrown-color;
       box-shadow: -40px 0px 24px -20px rgba(0, 0, 0, 0.4);
       padding: 2rem;
@@ -610,7 +609,6 @@ a {
         top: 100vw;
         left: 15vw;
         width: 60vw;
-        height: 75vw;
         box-shadow: 0px -40px 24px -20px rgba(0, 0, 0, 0.4);
         padding: 1rem;
         .findUs-location {
@@ -819,7 +817,7 @@ a {
     .findUs-card {
       margin-top: 10vw;
       width: 90vw;
-      height: 130vw;
+      height: 90vh;
       transform: translate(0%, 0%);
       position: relative;
       .findUs-box {
@@ -847,6 +845,7 @@ a {
         }
       }
       .findUs-gallery {
+        margin-left: 0vw;
         display: flex;
         top: 15vw;
         width: 90vw;
@@ -861,10 +860,9 @@ a {
         }
       }
       .findUs-detail {
-        top: 100vw;
+        top: 55vh;
         left: 15vw;
         width: 60vw;
-        height: 75vw;
         box-shadow: 0px -40px 24px -20px rgba(0, 0, 0, 0.4);
         padding: 1rem;
         .findUs-location {
@@ -880,6 +878,11 @@ a {
       }
     }
     .right {
+      .findUs-gallery {
+        margin-left: 2vw;
+        margin-right: 0vw;
+        right: 0vw;
+      }
       .findUs-detail {
         left: auto;
         right: 15vw;
