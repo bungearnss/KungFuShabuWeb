@@ -1,10 +1,14 @@
 import Image from 'next/image'
 import $ from 'jquery'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import '../../../../assets/styles/main.scss'
 
 export default function FindUsCard({ item }) {
   const [srcImg, setSrcImg] = useState(item.imgGal[0])
+  const [windowWidth, setWindowWIdth] = useState(0);
+  const ref = useRef();
+  const [boxHeight, setBoxHeight] = useState(0);
+  const [offset, setOffset] = useState(0);
 
   function handleSelect(item, id) {
     if (item.id == id) {
@@ -13,12 +17,26 @@ export default function FindUsCard({ item }) {
     }
     setSrcImg(item)
   }
+
+  useEffect(() => {
+    setWindowWIdth(window.innerWidth);
+    setBoxHeight(window.innerWidth * 0.75 + ref.current.clientHeight);
+    setOffset((window.innerWidth * 0.75 + ref.current.clientHeight) * 0.68);
+  }, []);
+
   return (
     <>
       <div
         id={item.id}
         key={item.id}
         className={`findUs-card ${item.id != 2 ? 'left' : 'right'}`}
+        style={
+          windowWidth > 768
+            ? {}
+            : {
+                height: boxHeight,
+              }
+        }
       >
         <div className='findUs-box'>
           <div className='findUs-rect' />
@@ -44,7 +62,17 @@ export default function FindUsCard({ item }) {
             </div>
           ))}
         </div>
-        <div className='findUs-detail'>
+        <div
+          ref={ref} 
+          className='findUs-detail'
+          style={
+            windowWidth > 768
+              ? {}
+              : {
+                  top: offset,
+                }
+          }
+          >
           <div className='findUs-location'>{item.location}</div>
           {item.detail.map((detail, index) => (
             <div id={index} key={index} className='findUs-det'>
