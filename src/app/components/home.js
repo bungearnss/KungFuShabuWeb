@@ -1,7 +1,7 @@
 import '../../../assets/styles/main.scss'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import ban01 from '../../../assets/images/ban01.webp'
+import banner from '../../../assets/images/banner01.webp'
 import ban02 from '../../../assets/images/ban02.webp'
 import ban03 from '../../../assets/images/ban03.webp'
 import ban04 from '../../../assets/images/ban04.jpg'
@@ -11,7 +11,7 @@ import ban03_mobile from '../../../assets/images/ban03_mobile.webp'
 
 export default function SectionHome() {
   const items = [
-    { id: 0, imgDesktop: ban01, imgMobile: ban01_mobile },
+    { id: 0, imgDesktop: banner, imgMobile: ban01_mobile },
     { id: 1, imgDesktop: ban02, imgMobile: ban02_mobile },
     { id: 2, imgDesktop: ban03, imgMobile: ban03_mobile },
     { id: 3, imgDesktop: ban04, imgMobile: ban04 },
