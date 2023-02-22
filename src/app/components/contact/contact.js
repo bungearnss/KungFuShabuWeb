@@ -27,9 +27,7 @@ export default function SectionContact() {
           </div>
           <div className='contact-detail'>
             <strong>Location:</strong> 11/11-12 Moo 3, Pimolrach, Bangbuathong,
-            <div>
-                Nonthaburi 11110
-            </div>
+            <div>Nonthaburi 11110</div>
             <span>
               <a
                 className='contact-detail'
@@ -50,9 +48,7 @@ export default function SectionContact() {
           </div>
           <div className='contact-detail'>
             <strong>Location:</strong> 107 Moo 12, Mueng Kao, Mueng Khon Kaen,
-            <div>
-                Khon Kaen 40000
-            </div>
+            <div>Khon Kaen 40000</div>
             <span>
               <a
                 className='contact-detail'
@@ -72,10 +68,9 @@ export default function SectionContact() {
             &emsp; &emsp; &emsp;Friday - Sunday 12.00 - 00.30
           </div>
           <div className='contact-detail'>
-            <strong>Location:</strong> 400/19 Chiangmai-Lampang road, Fahham, Mueng Chiangmai,
-            <div>
-                Chiangmai 50200
-            </div>
+            <strong>Location:</strong> 400/19 Chiangmai-Lampang road, Fahham,
+            Mueng Chiangmai,
+            <div>Chiangmai 50200</div>
             <span>
               <a
                 className='contact-detail'
@@ -92,10 +87,7 @@ export default function SectionContact() {
             <div className='contact-icon'>
               <Image src={Tel} alt='' /> :
             </div>
-            <a className='contact-detail'>
-              {' '}
-              088-999-2585, 094-853-0101{' '}
-            </a>
+            <a className='contact-detail'>088-999-2585, 094-853-0101</a>
           </div>
           <div className='contact-flex'>
             <div className='contact-icon'>
@@ -105,7 +97,7 @@ export default function SectionContact() {
               className='contact-detail'
               href='https://www.facebook.com/kungfugrillshabu'
             >
-              https://www.facebook.com/kungfugrillshabu
+              facebook.com/kungfugrillshabu
             </a>
           </div>
         </div>

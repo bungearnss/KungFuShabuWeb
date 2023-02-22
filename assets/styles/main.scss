@@ -935,19 +935,23 @@ a {
     display: block;
     .contact-info {
       flex-direction: column;
-      width: 100%;
+      width: calc(100vw - 2rem);
       padding: 1rem 1rem 0rem 1rem;
       .contact-detail {
         font-size: 1rem;
-        width: 100%;
+        width: calc(100vw - 2rem);
       }
       .contact-flex {
-        display: block;
-        gap: 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        .contact-icon {
+          gap: 0.5rem;
+        }
+        .contact-detail {
+          width: fit-content;
+        }
       }
-    }
-    a {
-      padding-right: 2rem;
     }
     .contact-map {
       width: 100vw;
