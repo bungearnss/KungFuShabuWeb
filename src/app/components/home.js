@@ -22,11 +22,20 @@ export default function SectionHome() {
 
   useEffect(() => {
     setWindowWIdth(window.innerWidth)
+    let timer
+  
     if (mouseOver) {
-      const timer = setInterval(() => {
+      timer = setInterval(() => {
         nextSlide()
-      }, [3000])
-      return () => clearInterval(timer)
+      }, 3000)
+    }
+    const handleMouseClick = () => {
+      clearInterval(timer)
+    }
+    document.addEventListener('click', handleMouseClick)
+    return () => {
+      clearInterval(timer)
+      document.removeEventListener('click', handleMouseClick)
     }
   }, [mouseOver])
 
