@@ -679,6 +679,7 @@ a {
       padding: 1rem 1rem 0rem 1rem;
       .contact-detail {
         font-size: 1rem;
+        padding: 1rem 1.5rem 0rem 1rem;
       }
       .contact-flex {
         display: block;
@@ -934,15 +935,19 @@ a {
     display: block;
     .contact-info {
       flex-direction: column;
-      width: 100vw;
+      width: 100%;
       padding: 1rem 1rem 0rem 1rem;
       .contact-detail {
         font-size: 1rem;
+        width: 100%;
       }
       .contact-flex {
         display: block;
         gap: 0rem;
       }
+    }
+    a {
+      padding-right: 2rem;
     }
     .contact-map {
       width: 100vw;
