@@ -457,6 +457,15 @@ a {
       line-height: 2rem;
       color: #ffffff;
     }
+    .contact-location-nextline {
+      display: block;
+      margin-top: 3rem;
+      width: 30vw;
+      font-weight: 300;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: #ffffff;
+    }
     .contact-icon {
       display: flex;
       align-items: center;
@@ -679,7 +688,6 @@ a {
       padding: 1rem 1rem 0rem 1rem;
       .contact-detail {
         font-size: 1rem;
-        padding: 0rem 0.25rem 0rem 0rem;
       }
       .contact-flex {
         display: block;

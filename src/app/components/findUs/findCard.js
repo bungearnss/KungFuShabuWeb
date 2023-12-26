@@ -1,10 +1,10 @@
-import Image from 'next/image'
-import $ from 'jquery'
-import { useState, useEffect, useRef } from 'react'
-import '../../../../assets/styles/main.scss'
+import Image from 'next/image';
+import $ from 'jquery';
+import { useEffect, useRef, useState } from 'react';
+import '../../../../assets/styles/main.scss';
 
 export default function FindUsCard({ item }) {
-  const [srcImg, setSrcImg] = useState(item.imgGal[0])
+  const [srcImg, setSrcImg] = useState(item.imgGal[0]);
   const [windowWidth, setWindowWIdth] = useState(0);
   const ref = useRef();
   const [boxHeight, setBoxHeight] = useState(0);
@@ -12,10 +12,10 @@ export default function FindUsCard({ item }) {
 
   function handleSelect(item, id) {
     if (item.id == id) {
-      $('.findUs-img img').attr('src', '').fadeOut()
-      $('.findUs-img img').fadeIn(800).attr('src', item)
+      $('.findUs-img img').attr('src', '').fadeOut();
+      $('.findUs-img img').fadeIn(800).attr('src', item);
     }
-    setSrcImg(item)
+    setSrcImg(item);
   }
 
   useEffect(() => {
@@ -23,13 +23,12 @@ export default function FindUsCard({ item }) {
     setBoxHeight(window.innerWidth * 0.75 + ref.current.clientHeight);
     setOffset((window.innerWidth * 0.75 + ref.current.clientHeight) * 0.68);
   }, []);
-
   return (
     <>
       <div
         id={item.id}
         key={item.id}
-        className={`findUs-card ${item.id != 2 ? 'left' : 'right'}`}
+        className={`findUs-card ${item.id % 2 != 0 ? 'left' : 'right'}`}
         style={
           windowWidth > 768
             ? {}
@@ -63,7 +62,7 @@ export default function FindUsCard({ item }) {
           ))}
         </div>
         <div
-          ref={ref} 
+          ref={ref}
           className='findUs-detail'
           style={
             windowWidth > 768
@@ -72,7 +71,7 @@ export default function FindUsCard({ item }) {
                   top: offset,
                 }
           }
-          >
+        >
           <div className='findUs-location'>{item.location}</div>
           {item.detail.map((detail, index) => (
             <div id={index} key={index} className='findUs-det'>
@@ -82,5 +81,5 @@ export default function FindUsCard({ item }) {
         </div>
       </div>
     </>
-  )
+  );
 }

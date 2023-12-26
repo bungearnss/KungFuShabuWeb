@@ -2,17 +2,21 @@ import Image from 'next/image'
 import React from 'react'
 import Facebook from '../../../../assets/images/facebook.svg'
 import Tel from '../../../../assets/images/tel.svg'
+import { useEffect, useState } from 'react';
 
 const AnyReactComponent = ({ text }) => <div className='marker'>{text}</div>
 
 export default function SectionContact() {
+  const [windowWidth, setWindowWIdth] = useState(0);
   const defaultProps = {
     center: [16.3770787701, 100.731630192],
     zoom: 7,
     khonkaen: { lat: 16.40539518014576, lng: 102.81647402944779 },
     chiangmai: { lat: 18.809886384421567, lng: 98.97668214856283 },
   }
-
+  useEffect(() => {
+    setWindowWIdth(window.innerWidth);
+  }, []);
   return (
     <>
       <div className='contact-info'>
@@ -41,7 +45,7 @@ export default function SectionContact() {
         <div>
           <div className='contact-location'>Khon Kaen</div>
           <div className='contact-detail'>
-            <strong>Location:</strong> Monday - Thursday 12.00 - 23.00 
+            <strong>Location:</strong> Monday - Thursday 12.00 - 23.00
           </div>
           <div className='contact-detail'>
             &emsp; &emsp; &emsp; &emsp;Friday - Sunday 12.00 - 00.30
@@ -82,12 +86,84 @@ export default function SectionContact() {
           </div>
         </div>
         <div>
+          <div className={windowWidth > 768
+            ? 'contact-location-nextline'
+            : 'contact-location'
+          }>Chiang Rai</div>
+          <div className='contact-detail'>
+            <strong>Hours:</strong> Monday - Thursday 12.00 - 23.00
+          </div>
+          <div className='contact-detail'>
+            &emsp; &emsp; &emsp;Friday - Sunday 12.00 - 00.30
+          </div>
+          <div className='contact-detail'>
+            <strong>Location:</strong> 99/22 Moo 13, Sansai, Mueng Chiangrai,
+            <div>Chiangrai 57000</div>
+            <span>
+              <a
+                className='contact-detail'
+                href='https://goo.gl/maps/4eqPcRNrDM6YA7jc8'
+              >
+                See More
+              </a>
+            </span>
+          </div>
+        </div>
+        <div>
+          <div className={windowWidth > 768
+            ? 'contact-location-nextline'
+            : 'contact-location'
+          }>Ubon Ratchathani</div>
+          <div className='contact-detail'>
+            <strong>Hours:</strong> Monday - Thursday 12.00 - 23.00
+          </div>
+          <div className='contact-detail'>
+            &emsp; &emsp; &emsp;Friday - Sunday 12.00 - 00.30
+          </div>
+          <div className='contact-detail'>
+            <strong>Location:</strong> 330 Moo 10, Jaeramae, Mueng Ubon Ratchathani,
+            <div>Ubon Ratchathani 34000</div>
+            <span>
+              <a
+                className='contact-detail'
+                href='https://goo.gl/maps/fu8zUjavnUU9GGCC9'
+              >
+                See More
+              </a>
+            </span>
+          </div>
+        </div>
+        <div>
+        <div className={windowWidth > 768
+            ? 'contact-location-nextline'
+            : 'contact-location'
+          }>Udon Thani</div>
+          <div className='contact-detail'>
+            <strong>Hours:</strong> Monday - Thursday 12.00 - 23.00
+          </div>
+          <div className='contact-detail'>
+            &emsp; &emsp; &emsp;Friday - Sunday 12.00 - 00.30
+          </div>
+          <div className='contact-detail'>
+            <strong>Location:</strong> 54/3 Moo 2, Bannongtu, Makkang, Mueng Udon Thani,
+            <div>Udon Thani 41000</div>
+            <span>
+              <a
+                className='contact-detail'
+                href='https://bit.ly/3N1UGLo'
+              >
+                See More
+              </a>
+            </span>
+          </div>
+        </div>
+        <div>
           <div className='contact-header'>CONTACT</div>
           <div className='contact-flex'>
             <div className='contact-icon'>
               <Image src={Tel} alt='' /> :
             </div>
-            <a className='contact-detail'>088-999-2585, 094-853-0101</a>
+            <a className='contact-detail'> 088-999-2585, 094-853-0101 </a>
           </div>
           <div className='contact-flex'>
             <div className='contact-icon'>
